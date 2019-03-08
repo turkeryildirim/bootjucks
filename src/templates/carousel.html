@@ -1,0 +1,13 @@
+{% import "macros/carousel.html" as carousel %}
+
+{% block content %}
+    {% call carousel.bsCarousel() %}
+        {% call carousel.bsCarouselItem('http://via.placeholder.com/1200x500', 'alt text', 'active') %}{% endcall %}
+        {% call carousel.bsCarouselItem('http://via.placeholder.com/1200x500', 'alt text') %}{% endcall %}
+    {% endcall %}
+<br>
+    {% call carousel.bsCarousel('newid', true, 2) %}
+        {% call carousel.bsCarouselItem('http://via.placeholder.com/1200x300', 'alt text', 'active') %}{% endcall %}
+        {% call carousel.bsCarouselItem('http://via.placeholder.com/1200x300', 'alt text') %}{% endcall %}
+    {% endcall %}
+{% endblock %}

@@ -1,0 +1,148 @@
+{% import "macros/card.html" as card %}
+
+{% block content %}
+    <p>
+    {% call card.bsCard() %}
+        {% call card.bsCardHeader() %}Header{% endcall %}
+        {% call card.bsCardBody() %}
+            {% call card.bsCardTitle() %}Title{% endcall %}
+            {% call card.bsCardSubtitle() %}Subtitle{% endcall %}
+            {% call card.bsCardText() %}Text{% endcall %}
+            {% call card.bsCardLink('http://google.com/') %}google{% endcall %}
+        {% endcall %}
+        {% call card.bsCardFooter() %}Footer{% endcall %}
+    {% endcall %}
+    </p>
+
+   <p>
+    {% call card.bsCard('border-success') %}
+        {% call card.bsCardHeader() %}Header{% endcall %}
+        {% call card.bsCardBody('text-success') %}
+            {% call card.bsCardTitle() %}Title{% endcall %}
+            {% call card.bsCardSubtitle() %}Subtitle{% endcall %}
+            {% call card.bsCardText() %}Text{% endcall %}
+            {% call card.bsCardLink('http://google.com/') %}google{% endcall %}
+        {% endcall %}
+        {% call card.bsCardFooter() %}Footer{% endcall %}
+    {% endcall %}
+    </p>
+
+    <p>
+    {% call card.bsCard('bg-primary text-white') %}
+        {% call card.bsCardHeader() %}Header{% endcall %}
+        {% call card.bsCardBody() %}
+            {% call card.bsCardTitle() %}Title{% endcall %}
+            {% call card.bsCardSubtitle() %}Subtitle{% endcall %}
+            {% call card.bsCardText() %}Text{% endcall %}
+            {% call card.bsCardLink('http://google.com/') %}google{% endcall %}
+        {% endcall %}
+        {% call card.bsCardFooter() %}Footer{% endcall %}
+    {% endcall %}
+    </p>
+
+    <p>
+    {% call card.bsCard() %}
+        {% call card.bsCardImage('http://via.placeholder.com/1200x300', 'alt text') %}{% endcall %}
+        {% call card.bsCardBody() %}
+            {% call card.bsCardTitle() %}Title{% endcall %}
+            {% call card.bsCardSubtitle() %}Subtitle{% endcall %}
+            {% call card.bsCardText() %}Text{% endcall %}
+            {% call card.bsCardLink('http://google.com/') %}google{% endcall %}
+        {% endcall %}
+        {% call card.bsCardFooter() %}Footer{% endcall %}
+    {% endcall %}
+    </p>
+
+    <p>
+    {% call card.bsCardGroup() %}
+        {% call card.bsCard() %}
+            {% call card.bsCardHeader() %}Header{% endcall %}
+            {% call card.bsCardBody() %}
+                {% call card.bsCardTitle() %}Title{% endcall %}
+                {% call card.bsCardSubtitle() %}Subtitle{% endcall %}
+                {% call card.bsCardText() %}Text{% endcall %}
+                {% call card.bsCardLink('http://google.com/') %}google{% endcall %}
+            {% endcall %}
+            {% call card.bsCardFooter() %}Footer{% endcall %}
+        {% endcall %}
+        {% call card.bsCard() %}
+            {% call card.bsCardHeader() %}Header{% endcall %}
+            {% call card.bsCardBody() %}
+                {% call card.bsCardTitle() %}Title{% endcall %}
+                {% call card.bsCardSubtitle() %}Subtitle{% endcall %}
+                {% call card.bsCardText() %}Text{% endcall %}
+                {% call card.bsCardLink('http://google.com/') %}google{% endcall %}
+            {% endcall %}
+            {% call card.bsCardFooter() %}Footer{% endcall %}
+        {% endcall %}
+    {% endcall %}
+    </p>
+
+    <p>
+    {% call card.bsCardDeck() %}
+        {% call card.bsCard() %}
+            {% call card.bsCardHeader() %}Header{% endcall %}
+            {% call card.bsCardBody() %}
+                {% call card.bsCardTitle() %}Title{% endcall %}
+                {% call card.bsCardSubtitle() %}Subtitle{% endcall %}
+                {% call card.bsCardText() %}Text{% endcall %}
+                {% call card.bsCardLink('http://google.com/') %}google{% endcall %}
+            {% endcall %}
+            {% call card.bsCardFooter() %}Footer{% endcall %}
+        {% endcall %}
+        {% call card.bsCard() %}
+            {% call card.bsCardHeader() %}Header{% endcall %}
+            {% call card.bsCardBody() %}
+                {% call card.bsCardTitle() %}Title{% endcall %}
+                {% call card.bsCardSubtitle() %}Subtitle{% endcall %}
+                {% call card.bsCardText() %}Text{% endcall %}
+                {% call card.bsCardLink('http://google.com/') %}google{% endcall %}
+            {% endcall %}
+            {% call card.bsCardFooter() %}Footer{% endcall %}
+        {% endcall %}
+    {% endcall %}
+    </p>
+
+    <p>
+    {% call card.bsCardColumns() %}
+        {% call card.bsCard() %}
+            {% call card.bsCardHeader() %}Header{% endcall %}
+            {% call card.bsCardBody() %}
+                {% call card.bsCardTitle() %}Title{% endcall %}
+                {% call card.bsCardSubtitle() %}Subtitle{% endcall %}
+                {% call card.bsCardText() %}Text{% endcall %}
+                {% call card.bsCardLink('http://google.com/') %}google{% endcall %}
+            {% endcall %}
+            {% call card.bsCardFooter() %}Footer{% endcall %}
+        {% endcall %}
+        {% call card.bsCard('bg-danger text-white') %}
+            {% call card.bsCardImage('http://via.placeholder.com/1200x300', 'alt text') %}{% endcall %}
+            {% call card.bsCardBody() %}
+                {% call card.bsCardTitle() %}Title{% endcall %}
+                {% call card.bsCardSubtitle() %}Subtitle{% endcall %}
+                {% call card.bsCardText() %}Text{% endcall %}
+                {% call card.bsCardLink('http://google.com/') %}google{% endcall %}
+            {% endcall %}
+            {% call card.bsCardFooter() %}Footer{% endcall %}
+        {% endcall %}
+        {% call card.bsCard('bg-primary text-white') %}
+            {% call card.bsCardBody() %}
+                {% call card.bsCardTitle() %}Title{% endcall %}
+                {% call card.bsCardSubtitle() %}Subtitle{% endcall %}
+                {% call card.bsCardText() %}Text{% endcall %}
+                {% call card.bsCardLink('http://google.com/') %}google{% endcall %}
+            {% endcall %}
+        {% endcall %}
+
+        {% call card.bsCard('border-success') %}
+            {% call card.bsCardHeader() %}Header{% endcall %}
+            {% call card.bsCardBody('text-success') %}
+                {% call card.bsCardTitle() %}Title{% endcall %}
+                {% call card.bsCardSubtitle() %}Subtitle{% endcall %}
+                {% call card.bsCardText() %}Text{% endcall %}
+                {% call card.bsCardLink('http://google.com/') %}google{% endcall %}
+            {% endcall %}
+        {% endcall %}
+    {% endcall %}
+    </p>
+{% endblock %}

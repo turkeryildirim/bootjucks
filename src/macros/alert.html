@@ -1,0 +1,5 @@
+{% macro bsAlert(type='primary', classes='') %}
+<div class="alert alert-{{ type }} {{ classes }}" role="alert">
+  {{ caller() }}
+</div>
+{% endmacro %}

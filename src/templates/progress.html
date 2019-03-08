@@ -1,0 +1,19 @@
+{% import "macros/progress.html" as progress %}
+
+{% block content %}
+    {% call progress.bsProgress(30) %}
+        {% call progress.bsProgressItem(55, 0, 100,'bg-success') %}{% endcall %}
+    {% endcall %}
+    <br>
+    {% call progress.bsProgress() %}
+        {% call progress.bsProgressItem(25, 0, 100, 'bg-success') %}{% endcall %}
+    {% endcall %}
+    <br>
+    {% call progress.bsProgress() %}
+        {% call progress.bsProgressItem(75, 0, 100, 'progress-bar-striped bg-info') %}%75{% endcall %}
+    {% endcall %}
+<br>
+    {% call progress.bsProgress() %}
+        {% call progress.bsProgressItem(60, 0, 100, 'progress-bar-striped progress-bar-animated') %}{% endcall %}
+    {% endcall %}
+{% endblock %}

@@ -1,0 +1,23 @@
+{% import "macros/media.html" as media %}
+
+{% block content %}
+    {% call media.bsMedia('http://via.placeholder.com/64', 'alt text') %}
+        {% call media.bsMediaBody('Media Title') %}
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+        {% endcall %}
+        {% call media.bsMediaBody('Media Title') %}
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+        {% endcall %}
+    {% endcall %}
+    <br>
+    {% call media.bsMedia('http://via.placeholder.com/64', 'alt text') %}
+        {% call media.bsMediaBody('Media Title') %}
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+            {% call media.bsMedia('http://via.placeholder.com/64', 'alt text') %}
+                {% call media.bsMediaBody('Media Title') %}
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                {% endcall %}
+            {% endcall %}
+        {% endcall %}
+    {% endcall %}
+{% endblock %}

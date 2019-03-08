@@ -1,0 +1,60 @@
+{% import "macros/button.html" as button %}
+
+{% block content %}
+    <p>
+    {% call button.bsButton() %}Primary{% endcall %}
+    {% call button.bsButton('secondary') %}secondary{% endcall %}
+    {% call button.bsButton('success') %}success{% endcall %}
+    {% call button.bsButton('danger') %}danger{% endcall %}
+    {% call button.bsButton('warning') %}warning{% endcall %}
+    {% call button.bsButton('info') %}info{% endcall %}
+    {% call button.bsButton('light') %}light{% endcall %}
+    {% call button.bsButton('dark') %}dark{% endcall %}
+    {% call button.bsButton('link') %}link{% endcall %}
+    </p>
+
+    <p>
+    {% call button.bsButton('outline-primary') %}outline-primary{% endcall %}
+    {% call button.bsButton('outline-secondary') %}outline-secondary{% endcall %}
+    {% call button.bsButton('outline-success') %}outline-success{% endcall %}
+    {% call button.bsButton('outline-danger') %}outline-danger{% endcall %}
+    {% call button.bsButton('outline-warning') %}outline-warning{% endcall %}
+    {% call button.bsButton('outline-info') %}outline-info{% endcall %}
+    {% call button.bsButton('outline-light') %}outline-light{% endcall %}
+    {% call button.bsButton('outline-dark') %}outline-dark{% endcall %}
+    {% call button.bsButton('outline-link') %}outline-link{% endcall %}
+    </p>
+
+    <p>
+    {% call button.bsButton('primary', true) %}disabled{% endcall %}
+    </p>
+
+    <p>
+    {% call button.bsButton('primary', false, 'btn-lg') %}Large button{% endcall %}
+    {% call button.bsButton('primary', false, 'btn-sm') %}Small button{% endcall %}
+    </p>
+    
+    <p>
+    {% call button.bsButton('primary', false, 'btn-block') %}Block button{% endcall %}
+    {% call button.bsButton('primary', false, 'btn-block btn-sm') %}Small block button{% endcall %}
+    </p>
+
+    <p>
+    {% call button.bsButtonGroup('sample label') %}
+        {% call button.bsButton() %}Left{% endcall %}
+        {% call button.bsButton() %}Middle{% endcall %}
+        {% call button.bsButton() %}Right{% endcall %}
+    {% endcall %}
+    </p>
+
+    <p>
+    {% call button.bsButtonToolbar('toolbar label') %}
+        {% call button.bsButtonGroup('sample label', 'btn-group-lg') %}
+            {% call button.bsButton() %}1{% endcall %}
+            {% call button.bsButton() %}2{% endcall %}
+            {% call button.bsButton() %}3{% endcall %}
+            {% call button.bsButton() %}4{% endcall %}
+        {% endcall %}
+    {% endcall %}
+    </p>
+{% endblock %}

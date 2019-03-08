@@ -1,0 +1,33 @@
+{% macro bsNav(classes='') %}
+<nav class="nav {{ classes }}">
+  {{ caller() }}
+</nav>
+{% endmacro %}
+
+{% macro bsNavItem(link, classes='') %}
+    <a class="nav-link {{ classes }}" href="{{ link }}">{{ caller() }}</a>
+{% endmacro %}
+
+{% macro bsTab(id='nav-tab', classes='') %}
+<nav>
+  <div class="nav nav-tabs {{ classes }}" id="{{ id }}" role="tablist">
+  {{ caller() }}
+  </div>
+</nav>
+{% endmacro %}
+
+{% macro bsTabItem(link, selected, classes='') %}
+    <a class="nav-item nav-link {% if selected %} active{% endif %} {{ classes }}" id="{{ link }}-tab" data-toggle="tab" href="#{{ link }}" role="tab" aria-controls="{{ link }}" aria-selected="{{ selected }}">{{ caller() }}</a>
+{% endmacro %}
+
+{% macro bsTabContent(id='nav-tabContent', classes='') %}
+<div class="tab-content {{ classes }}" id="{{ id }}">
+    {{ caller() }}
+</div>
+{% endmacro %}
+
+{% macro bsTabContentItem(link, selected, classes='') %}
+    <div class="tab-pane {{ classes }} {% if selected %} show active{% endif %}" id="{{ link }}" role="tabpanel" aria-labelledby="{{ link }}-tab">
+        {{ caller() }}
+    </div>
+{% endmacro %}

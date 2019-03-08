@@ -1,0 +1,8 @@
+{% import "macros/toast.html" as toast %}
+
+{% block content %}
+    {% call toast.bsToast('show') %}
+        {% call toast.bsToastHeader('Title', '2 secs ago') %}{% endcall %}
+        {% call toast.bsToastBody() %}Text body{% endcall %}
+    {% endcall %}
+{% endblock %}

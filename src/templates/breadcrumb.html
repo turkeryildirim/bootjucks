@@ -1,0 +1,11 @@
+{% import "macros/breadcrumb.html" as breadcrumb %}
+
+{% block content %}
+
+    {% call breadcrumb.bsBreadcrumb() %}
+        {% call breadcrumb.bsBreadcrumbItems() %}<a href="#">Home</a>{% endcall %}
+        {% call breadcrumb.bsBreadcrumbItems() %}<a href="#">Library</a>{% endcall %}
+        {% call breadcrumb.bsBreadcrumbItems(true) %}Data{% endcall %}
+    {% endcall %}
+
+{% endblock %}

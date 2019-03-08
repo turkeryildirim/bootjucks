@@ -1,0 +1,36 @@
+{% macro bsCarousel(id='carouselExample', control=false, indicators=0, classes='') %}
+    <div id="{{ id }}" class="carousel slide {{ classes }}" data-ride="carousel">
+    {% if indicators > 0 %}
+    <ol class="carousel-indicators">
+        {% for i in range(0, indicators) %}
+            <li data-target="#{{ id }}" data-slide-to="{{ loop.index0 }}"{% if loop.index0==0 %} class="active" {% endif %}></li>
+        {% endfor %}
+    </ol>
+    {% endif %}
+    <div class="carousel-inner">
+        {{ caller() }}
+    </div>
+    {% if control %}
+    <a class="carousel-control-prev" href="#{{ id }}" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#{{ id }}" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    {% endif %}
+    </div>
+{% endmacro %}
+
+{% macro bsCarouselItem(src, alt='...', classes='', captionTitle='', captionText='') %}
+    <div class="carousel-item {{ classes }}">
+        <img src="{{ src }}" class="d-block w-100" alt="{{ alt }}">
+        {% if captionTitle or captionText %}
+        <div class="carousel-caption d-none d-md-block">
+            {% if captionTitle %}<h5>{{captionTitle}}</h5>{% endif %}
+            {% if captionTitle %}<p>{{captionText}}</p>{% endif %}
+        </div>
+        {% endif %}
+    </div>
+{% endmacro %}

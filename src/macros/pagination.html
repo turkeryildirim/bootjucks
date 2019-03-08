@@ -1,0 +1,28 @@
+{% macro bsPaginate(label='pagination example', classes='') %}
+<nav aria-label="{{ label }}">
+  <ul class="pagination {{ classes }}">
+  {{ caller() }}
+  </ul>
+</nav>
+{% endmacro %}
+
+{% macro bsPaginateItem(link='#', current=false, disabled=false, classes='') %}
+    {% if disabled %}
+    <li class="page-item disabled">
+      <span class="page-link">{{ caller() }}</span>
+    </li>
+    {% else %}
+        {% if current %}
+    <li class="page-item {% if current %}active{% endif %}" aria-current="page">
+      <span class="page-link">
+        {{ caller() }}
+        {% if current %}
+        <span class="sr-only">(current)</span>
+        {% endif %}
+      </span>
+    </li>
+        {% else %}
+        <li class="page-item"><a class="page-link" href="{{ link }}">{{ caller() }}</a></li>
+        {% endif %}
+    {% endif %}
+{% endmacro %}

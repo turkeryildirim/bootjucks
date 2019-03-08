@@ -1,0 +1,59 @@
+{% macro bsCardColumns(classes='') %}
+    <div class="card-columns {{ classes }}">{{ caller() }}</div>
+{% endmacro %}
+
+{% macro bsCardDeck(classes='') %}
+    <div class="card-deck {{ classes }}">{{ caller() }}</div>
+{% endmacro %}
+
+{% macro bsCardGroup(classes='') %}
+    <div class="card-group {{ classes }}">{{ caller() }}</div>
+{% endmacro %}
+
+{% macro bsCard(classes='') %}
+<div class="card {{ classes }}">
+  {{ caller() }}
+</div>
+{% endmacro %}
+
+{% macro bsCardHeader(classes='') %}
+    <div class="card-header {{ classes }}">{{ caller() }}</div>
+{% endmacro %}
+
+{% macro bsCardBody(classes='') %}
+    <div class="card-body {{ classes }}">{{ caller() }}</div>
+{% endmacro %}
+
+{% macro bsCardFooter(classes='') %}
+    <div class="card-footer {{ classes }}">{{ caller() }}</div>
+{% endmacro %}
+
+{% macro bsCardTitle(classes='') %}
+    <h5 class="card-title {{ classes }}">{{ caller() }}</h5>
+{% endmacro %}
+
+{% macro bsCardSubtitle(classes='') %}
+    <h6 class="card-subtitle {{ classes }}">{{ caller() }}</h6>
+{% endmacro %}
+
+{% macro bsCardLink(link, classes='') %}
+    <a href="{{ link }}" class="card-link {{ classes }}">{{ caller() }}</a>
+{% endmacro %}
+
+{% macro bsCardText(classes='') %}
+    <p class="card-text {{ classes }}">{{ caller() }}</p>
+{% endmacro %}
+
+{% macro bsCardImage(src='', alt='...', classes='') %}
+    <img src="{{ src }}" class="card-img-top {{ classes }}" alt="{{ alt }}">
+{% endmacro %}
+
+{% macro bsCardList(classes='') %}
+    <ul class="list-group list-group-flush {{ classes }}">
+    {{ caller() }}
+    </ul>
+{% endmacro %}
+
+{% macro bsCardListItem(classes='') %}
+    <li class="list-group-item {{ classes }}">{{ caller() }}</li>
+{% endmacro %}

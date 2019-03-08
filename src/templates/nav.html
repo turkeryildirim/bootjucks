@@ -1,0 +1,32 @@
+{% import "macros/nav.html" as nav %}
+
+{% block content %}
+    {% call nav.bsNav() %}
+        {% call nav.bsNavItem('#', 'active') %}nav 1{% endcall %}
+        {% call nav.bsNavItem('#') %}nav 2{% endcall %}
+        {% call nav.bsNavItem('#', 'disabled') %}nav 3{% endcall %}
+    {% endcall %}
+    <br>
+    {% call nav.bsNav('flex-column') %}
+        {% call nav.bsNavItem('#', 'active') %}nav 1{% endcall %}
+        {% call nav.bsNavItem('#') %}nav 2{% endcall %}
+        {% call nav.bsNavItem('#', 'disabled') %}nav 3{% endcall %}
+    {% endcall %}
+    <br>
+    {% call nav.bsNav('nav-pills') %}
+        {% call nav.bsNavItem('#', 'active') %}nav 1{% endcall %}
+        {% call nav.bsNavItem('#') %}nav 2{% endcall %}
+        {% call nav.bsNavItem('#', 'disabled') %}nav 3{% endcall %}
+    {% endcall %}
+    <br>
+    {% call nav.bsTab('nav-tabs') %}
+        {% call nav.bsTabItem('home', true) %}home{% endcall %}
+        {% call nav.bsTabItem('profile') %}profile{% endcall %}
+        {% call nav.bsTabItem('contact') %}contact{% endcall %}
+    {% endcall %}
+    {% call nav.bsTabContent('nav-tabContent') %}
+        {% call nav.bsTabContentItem('home', true) %}home content{% endcall %}
+        {% call nav.bsTabContentItem('profile', false, 'fade') %}profile content{% endcall %}
+        {% call nav.bsTabContentItem('contact') %}contact content{% endcall %}
+    {% endcall %}
+{% endblock %}

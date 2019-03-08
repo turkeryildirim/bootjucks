@@ -1,0 +1,9 @@
+{% macro bsProgress(height=0, classes='') %}
+<div class="progress {{ classes }}"{% if height!=0 %} style="height: {{ height }}px;"{% endif %}>
+    {{ caller() }}
+</div>
+{% endmacro %}
+
+{% macro bsProgressItem(width=0, min=0, max=100, classes='') %}
+<div class="progress-bar {{ classes }}" {% if width!=0 %}style="width: {{ width }}%;"{% endif %} aria-valuenow="{{ width }}" aria-valuemin="{{ min }}" aria-valuemax="{{ max }}" role="progressbar">{{ caller() }}</div>
+{% endmacro %}

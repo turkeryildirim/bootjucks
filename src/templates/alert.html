@@ -1,0 +1,37 @@
+{% import "macros/alert.html" as alert %}
+
+{% block content %}
+
+    {% call alert.bsAlert() %}
+    A simple primary alert—check it out!
+    {% endcall %}
+
+    {% call alert.bsAlert('secondary') %}
+    A simple primary alert—check it out!
+    {% endcall %}
+
+    {% call alert.bsAlert('success') %}
+    A simple primary alert—check it out!
+    {% endcall %}
+
+    {% call alert.bsAlert('danger') %}
+    A simple primary alert—check it out!
+    {% endcall %}
+
+    {% call alert.bsAlert('warning') %}
+    A simple primary alert—check it out!
+    {% endcall %}
+
+    {% call alert.bsAlert('info') %}
+    A simple primary alert—check it out!
+    {% endcall %}
+
+    {% call alert.bsAlert('light') %}
+    A simple primary alert—check it out!
+    {% endcall %}
+
+    {% call alert.bsAlert('dark') %}
+    A simple primary alert—check it out!
+    {% endcall %}
+
+{% endblock %}

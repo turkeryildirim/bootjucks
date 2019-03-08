@@ -1,0 +1,13 @@
+{% macro bsMedia(src, alt='...', classes='mr-3') %}
+<div class="media">
+  <img src="{{ src }}" class="{{ classes }}" alt="{{ alt }}">
+  {{ caller() }}
+</div>
+{% endmacro %}
+
+{% macro bsMediaBody(title, classes='mt-0') %}
+  <div class="media-body">
+    <h5 class="{{ classes }}">{{ title }}</h5>
+    {{ caller() }}
+  </div>
+{% endmacro %}

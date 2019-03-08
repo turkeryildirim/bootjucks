@@ -1,0 +1,27 @@
+{% import "macros/modal.html" as modal %}
+{% import "macros/button.html" as button %}
+
+{% block content %}
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+    Launch demo modal
+    </button>
+    {% call modal.bsModal('exampleModal2') %}
+        {% call modal.bsModalHeader('Modal Title', true) %}{% endcall %}
+        {% call modal.bsModalBody() %}
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+        {% endcall %}
+        {% call modal.bsModalFooter() %}
+            {% call button.bsButton() %}Save changes{% endcall %}
+        {% endcall %}
+    {% endcall %}
+    &nbsp;
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal 2
+    </button>
+    {% call modal.bsModal('exampleModal', 'modal-sm') %}
+        {% call modal.bsModalBody() %}
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+        {% endcall %}
+    {% endcall %}
+    <br>
+{% endblock %}

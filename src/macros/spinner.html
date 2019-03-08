@@ -1,0 +1,9 @@
+{% macro bsSpinner(type='spinner', classes='') %}
+{% if type=='spinner' %}
+<div class="spinner-border {{ classes }}" role="status">
+{% else %}
+<div class="spinner-grow {{ classes }}" role="status">
+{% endif %}
+  <span class="sr-only">Loading...</span>
+</div>
+{% endmacro %}

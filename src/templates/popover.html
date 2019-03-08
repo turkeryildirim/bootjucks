@@ -1,0 +1,6 @@
+{% import "macros/popover.html" as pop %}
+
+{% block content %}
+    {% call pop.bsPopover('content', 'title', 'top', 'btn-primary') %} Button 1 {% endcall %}&nbsp;
+    {% call pop.bsPopover('loooong content') %} Button 2 {% endcall %}
+{% endblock %}

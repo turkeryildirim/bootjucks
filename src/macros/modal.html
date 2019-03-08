@@ -1,0 +1,32 @@
+{% macro bsModal(id='exampleModal', size='', classes='') %}
+<div class="modal {{ classes }}" id="{{ id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalTitle" aria-hidden="true">
+  <div class="modal-dialog {{ size }}" role="document">
+    <div class="modal-content">
+    {{ caller() }}
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro bsModalHeader(title, dismiss=false, classes='') %}
+    <div class="modal-header {{ classes }}">
+        <h5 class="modal-title" id="exampleModalTitle">{{ title }}</h5>
+        {% if dismiss %}
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        {% endif %}
+    </div>
+{% endmacro %}
+
+{% macro bsModalFooter(classes='') %}
+    <div class="modal-footer {{ classes }}">
+    {{ caller() }}
+    </div>
+{% endmacro %}
+
+{% macro bsModalBody(classes='') %}
+    <div class="modal-body {{ classes }}">
+    {{ caller() }}
+    </div>
+{% endmacro %}

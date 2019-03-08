@@ -1,0 +1,20 @@
+{% macro bsButton(type='primary', disabled=false, classes='') %}
+    {% if disabled %}
+    <button type="button" class="btn btn-{{ type }} {{ classes }}" disabled>{{ caller() }}</button>
+    {% else %}
+    <button type="button" class="btn btn-{{ type }} {{ classes }}">{{ caller() }}</button>
+    {% endif %}
+{% endmacro %}
+
+{% macro bsButtonGroup(label='', classes='') %}
+    <div class="btn-group {{ classes }}" role="group" aria-label="{{ label }}">
+    {{ caller() }}
+    </div>
+{% endmacro %}
+
+{% macro bsButtonToolbar(label='', classes='') %}
+    <div class="btn-toolbar {{ classes }}" role="toolbar" aria-label="{{ label }}">
+    {{ caller() }}
+    </div>
+{% endmacro %}
+

@@ -1,0 +1,6 @@
+{% import "macros/spinner.html" as spinner %}
+
+{% block content %}
+    {% call spinner.bsSpinner('spinner') %}{% endcall %}
+    {% call spinner.bsSpinner('glow', 'text-danger') %}{% endcall %}
+{% endblock %}

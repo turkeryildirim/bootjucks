@@ -1,0 +1,15 @@
+{% macro bsBreadcrumb(classes='') %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb {{ classes }}">
+    {{ caller() }}
+  </ol>
+</nav>
+{% endmacro %}
+
+{% macro bsBreadcrumbItems(current=false, classes='') %}
+    {% if current %}
+    <li class="breadcrumb-item {{ classes }} active" aria-current="page">{{ caller() }}</li>
+    {% else %}
+    <li class="breadcrumb-item {{ classes }}">{{ caller() }}</li>
+    {% endif %}
+{% endmacro %}

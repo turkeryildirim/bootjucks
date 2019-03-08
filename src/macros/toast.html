@@ -1,0 +1,22 @@
+{% macro bsToast(classes='') %}
+    <div class="toast {{ classes }}" role="alert" aria-live="assertive" aria-atomic="true">
+        {{ caller() }}
+    </div>
+{% endmacro %}
+
+{% macro bsToastHeader(title, text='', classes='') %}
+    <div class="toast-header {{ classes }}">
+        {{ caller() }}
+        <strong class="mr-auto">{{ title }}</strong>
+        <small class="text-muted">{{ text }}</small>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+{% endmacro %}
+
+{% macro bsToastBody(classes='') %}
+    <div class="toast-body {{ classes }}">
+        {{ caller() }}
+    </div>
+{% endmacro %}

@@ -1,0 +1,13 @@
+{% import "macros/pagination.html" as paginate %}
+
+{% block content %}
+    {% call paginate.bsPaginate() %}
+        {% call paginate.bsPaginateItem('#') %}Previous{% endcall %}
+        {% call paginate.bsPaginateItem('#') %}1{% endcall %}
+        {% call paginate.bsPaginateItem('#', true) %}2{% endcall %}
+        {% call paginate.bsPaginateItem('#') %}3{% endcall %}
+        {% call paginate.bsPaginateItem('#',false, true) %}4{% endcall %}
+        {% call paginate.bsPaginateItem('#') %}5{% endcall %}
+        {% call paginate.bsPaginateItem('#') %}Next{% endcall %}
+    {% endcall %}
+{% endblock %}
